@@ -1,0 +1,10 @@
+version: '3'
+services:
+    devphp:
+        build: .
+        volumes: 
+            - ..:/workspace
+            - /var/run/docker.sock:/var/run/docker.sock
+        command: apache2-foreground
+        ports:
+            - 32424:80
